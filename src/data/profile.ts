@@ -9,7 +9,7 @@ export const profile = {
   location: "Beograd, Serbia · open to remote / hybrid",
   email: "smijailovic5@gmail.com",
   links: {
-    github: "#", // e.g. https://github.com/your-username
+    github: "https://github.com/ArlenStog",
     linkedin: "#", // e.g. https://www.linkedin.com/in/your-profile
     cv: "/cv-aleksandar-mijailovic.pdf",
   },
