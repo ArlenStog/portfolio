@@ -10,7 +10,7 @@ export const profile = {
   email: "smijailovic5@gmail.com",
   links: {
     github: "https://github.com/ArlenStog",
-    linkedin: "#", // e.g. https://www.linkedin.com/in/your-profile
+    linkedin: "https://www.linkedin.com/in/aleksandar-mijailovic-65b09a251/",
     cv: "/cv-aleksandar-mijailovic.pdf",
   },
   summary:
