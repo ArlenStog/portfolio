@@ -292,6 +292,12 @@ export default function Home() {
             >
               {profile.email}
             </a>
+            <a
+              href={`tel:${profile.phone.replace(/\s/g, "")}`}
+              className="block font-mono text-lg text-zinc-300 hover:text-emerald-300"
+            >
+              {profile.phone}
+            </a>
             <div className="flex flex-wrap gap-5 text-zinc-400">
               {isSet(profile.links.github) && (
                 <a

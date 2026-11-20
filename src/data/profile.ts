@@ -8,6 +8,7 @@ export const profile = {
   stack: "React · Next.js · TypeScript",
   location: "Beograd, Serbia · open to remote / hybrid",
   email: "smijailovic5@gmail.com",
+  phone: "+381 65 556 5546",
   links: {
     github: "https://github.com/ArlenStog",
     linkedin: "https://www.linkedin.com/in/aleksandar-mijailovic-65b09a251/",
