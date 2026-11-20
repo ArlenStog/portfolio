@@ -1,10 +1,25 @@
 import Image from "next/image";
-import { clientProjects, education, experience, featuredProject, profile, skills } from "@/data/profile";
+import {
+  clientProjects,
+  education,
+  experience,
+  featuredProject,
+  profile,
+  skills,
+} from "@/data/profile";
 
 // Links still set to "#" in profile.ts are hidden instead of rendering broken buttons.
 const isSet = (href: string) => href && href !== "#";
 
-function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+function Section({
+  id,
+  title,
+  children,
+}: {
+  id: string;
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <section id={id} className="scroll-mt-24 space-y-8 py-16 sm:py-20">
       <h2 className="flex items-center gap-3 font-mono text-sm uppercase tracking-[0.2em] text-emerald-400">
@@ -20,7 +35,10 @@ function Tags({ items }: { items: string[] }) {
   return (
     <ul className="flex flex-wrap gap-2">
       {items.map((t) => (
-        <li key={t} className="rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 font-mono text-xs text-zinc-300">
+        <li
+          key={t}
+          className="rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 font-mono text-xs text-zinc-300"
+        >
           {t}
         </li>
       ))}
@@ -42,11 +60,18 @@ export default function Home() {
     <>
       <header className="sticky top-0 z-20 border-b border-zinc-800/60 bg-zinc-950/75 backdrop-blur">
         <nav className="mx-auto flex max-w-5xl items-center gap-5 px-4 py-3 text-sm sm:px-6">
-          <a href="#top" className="mr-auto font-mono font-semibold text-zinc-100">
+          <a
+            href="#top"
+            className="mr-auto font-mono font-semibold text-zinc-100"
+          >
             am<span className="text-emerald-400">.</span>
           </a>
           {nav.map(([href, label]) => (
-            <a key={href} href={href} className="hidden text-zinc-400 transition hover:text-zinc-100 sm:block">
+            <a
+              key={href}
+              href={href}
+              className="hidden text-zinc-400 transition hover:text-zinc-100 sm:block"
+            >
               {label}
             </a>
           ))}
@@ -72,7 +97,9 @@ export default function Home() {
           </h1>
           <p className="mt-6 text-xl text-zinc-300 sm:text-2xl">
             {profile.role} <span className="text-zinc-600">/</span>{" "}
-            <span className="font-mono text-lg text-emerald-300 sm:text-xl">{profile.stack}</span>
+            <span className="font-mono text-lg text-emerald-300 sm:text-xl">
+              {profile.stack}
+            </span>
           </p>
           <p className="mt-3 text-zinc-500">{profile.location}</p>
 
@@ -94,7 +121,9 @@ export default function Home() {
           <dl className="mt-16 grid gap-6 border-t border-zinc-800/80 pt-8 sm:grid-cols-3">
             {profile.highlights.map((h) => (
               <div key={h.label}>
-                <dt className="font-mono text-3xl font-semibold text-zinc-50">{h.value}</dt>
+                <dt className="font-mono text-3xl font-semibold text-zinc-50">
+                  {h.value}
+                </dt>
                 <dd className="mt-1 text-sm text-zinc-500">{h.label}</dd>
               </div>
             ))}
@@ -102,7 +131,9 @@ export default function Home() {
         </section>
 
         <Section id="about" title="About">
-          <p className="max-w-3xl text-lg leading-relaxed text-zinc-300">{profile.summary}</p>
+          <p className="max-w-3xl text-lg leading-relaxed text-zinc-300">
+            {profile.summary}
+          </p>
         </Section>
 
         <Section id="project" title="Featured project">
@@ -122,10 +153,16 @@ export default function Home() {
             </div>
             <div className="space-y-6 p-6 sm:p-8">
               <div className="flex flex-wrap items-baseline justify-between gap-3">
-                <h3 className="text-2xl font-semibold text-zinc-50">{featuredProject.name}</h3>
-                <span className="font-mono text-sm text-zinc-500">{featuredProject.year}</span>
+                <h3 className="text-2xl font-semibold text-zinc-50">
+                  {featuredProject.name}
+                </h3>
+                <span className="font-mono text-sm text-zinc-500">
+                  {featuredProject.year}
+                </span>
               </div>
-              <p className="max-w-3xl text-zinc-300">{featuredProject.description}</p>
+              <p className="max-w-3xl text-zinc-300">
+                {featuredProject.description}
+              </p>
               <ul className="grid gap-x-8 gap-y-2 text-sm text-zinc-400 sm:grid-cols-2">
                 {featuredProject.points.map((p) => (
                   <li key={p} className="flex gap-2">
@@ -164,32 +201,48 @@ export default function Home() {
             <h3 className="text-lg font-semibold text-zinc-100">Client work</h3>
             <ul className="grid gap-4 sm:grid-cols-3">
               {clientProjects.map((p) => (
-                <li key={p.name} className="flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
+                <li
+                  key={p.name}
+                  className="flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5"
+                >
                   <h4 className="font-semibold text-zinc-100">{p.name}</h4>
-                  <p className="mt-2 flex-1 text-sm text-zinc-400">{p.description}</p>
-                  <p className="mt-4 font-mono text-xs text-zinc-500">{p.stack.join(" · ")}</p>
+                  <p className="mt-2 flex-1 text-sm text-zinc-400">
+                    {p.description}
+                  </p>
+                  <p className="mt-4 font-mono text-xs text-zinc-500">
+                    {p.stack.join(" · ")}
+                  </p>
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-zinc-500">Client names withheld. Demos and code walkthroughs available on request.</p>
+            <p className="text-sm text-zinc-500">
+              Client names withheld. Demos and code walkthroughs available on
+              request.
+            </p>
           </div>
         </Section>
 
         <Section id="experience" title="Experience">
           <ol className="space-y-12">
             {experience.map((job) => (
-              <li key={job.company} className="grid gap-4 sm:grid-cols-[180px_1fr]">
+              <li
+                key={job.company}
+                className="grid gap-4 sm:grid-cols-[180px_1fr]"
+              >
                 <div className="font-mono text-sm text-zinc-500">
                   <p>{job.period}</p>
                   {job.place && <p>{job.place}</p>}
                 </div>
                 <div className="space-y-5">
                   <h3 className="text-xl font-semibold text-zinc-50">
-                    {job.role} <span className="text-emerald-400">· {job.company}</span>
+                    {job.role}{" "}
+                    <span className="text-emerald-400">· {job.company}</span>
                   </h3>
                   {job.projects.map((p, i) => (
                     <div key={p.name || i} className="space-y-2">
-                      {p.name && <h4 className="font-medium text-zinc-200">{p.name}</h4>}
+                      {p.name && (
+                        <h4 className="font-medium text-zinc-200">{p.name}</h4>
+                      )}
                       <ul className="space-y-1.5 text-zinc-400">
                         {p.points.map((pt) => (
                           <li key={pt} className="flex gap-2">
@@ -221,7 +274,8 @@ export default function Home() {
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5">
             <p className="font-medium text-zinc-100">{education.degree}</p>
             <p className="mt-1 text-sm text-zinc-400">
-              {education.school} · <span className="font-mono">{education.period}</span>
+              {education.school} ·{" "}
+              <span className="font-mono">{education.period}</span>
             </p>
             <p className="mt-3 text-sm text-zinc-400">{education.languages}</p>
           </div>
@@ -240,16 +294,30 @@ export default function Home() {
             </a>
             <div className="flex flex-wrap gap-5 text-zinc-400">
               {isSet(profile.links.github) && (
-                <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-zinc-100">
+                <a
+                  href={profile.links.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-zinc-100"
+                >
                   GitHub ↗
                 </a>
               )}
               {isSet(profile.links.linkedin) && (
-                <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="hover:text-zinc-100">
+                <a
+                  href={profile.links.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-zinc-100"
+                >
                   LinkedIn ↗
                 </a>
               )}
-              <a href={profile.links.cv} download className="hover:text-zinc-100">
+              <a
+                href={profile.links.cv}
+                download
+                className="hover:text-zinc-100"
+              >
                 CV (PDF) ↓
               </a>
             </div>
@@ -258,7 +326,8 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-zinc-800/60 py-8 text-center font-mono text-xs text-zinc-600">
-        © {new Date().getFullYear()} {profile.name} · Built with Next.js &amp; Tailwind CSS
+        © {new Date().getFullYear()} {profile.name} · Built with Next.js &amp;
+        Tailwind CSS
       </footer>
     </>
   );

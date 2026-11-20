@@ -6,7 +6,7 @@ export const profile = {
   name: "Aleksandar Mijailović",
   role: "Frontend Developer",
   stack: "React · Next.js · TypeScript",
-  location: "Mladenovac, Serbia · open to remote / hybrid",
+  location: "Beograd, Serbia · open to remote / hybrid",
   email: "smijailovic5@gmail.com",
   links: {
     github: "#", // e.g. https://github.com/your-username
@@ -26,7 +26,7 @@ export const featuredProject = {
   name: "Fade & Co. — barbershop booking",
   year: "2026",
   description:
-    "A full-stack booking app: customers sign up, pick a service and a free slot, and manage their appointments; the owner gets a daily schedule. Customers can also just type what they want (\"haircut and beard next friday after 2pm\") and Claude turns it into matching free slots.",
+    'A full-stack booking app: customers sign up, pick a service and a free slot, and manage their appointments; the owner gets a daily schedule. Customers can also just type what they want ("haircut and beard next friday after 2pm") and Claude turns it into matching free slots.',
   points: [
     "Transactional booking in PostgreSQL. Two people clicking the same slot can't double-book",
     "Availability computed in the salon's timezone, DST-safe and unit tested",
@@ -35,9 +35,23 @@ export const featuredProject = {
     "Natural-language booking via the Claude API with validated structured output",
     "Playwright end-to-end and Vitest unit tests, running on GitHub Actions",
   ],
-  stack: ["Next.js 16", "React 19", "TypeScript", "PostgreSQL", "TanStack Query", "Tailwind", "Claude API", "Playwright", "Vitest", "Vercel"],
+  stack: [
+    "Next.js 16",
+    "React 19",
+    "TypeScript",
+    "PostgreSQL",
+    "TanStack Query",
+    "Tailwind",
+    "Claude API",
+    "Playwright",
+    "Vitest",
+    "Vercel",
+  ],
   images: [
-    { src: "/projects/screenshot.png", alt: "Booking screen with services, a date and available time slots" },
+    {
+      src: "/projects/screenshot.png",
+      alt: "Booking screen with services, a date and available time slots",
+    },
     { src: "/projects/home.png", alt: "Landing page with the services list" },
   ],
   links: {
@@ -72,7 +86,18 @@ export const experience = [
         ],
       },
     ],
-    stack: ["React", "Next.js", "TypeScript", "Redux", "Sass", "styled-components", "Jest", "Vitest", "Jira", "Bitbucket"],
+    stack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Sass",
+      "styled-components",
+      "Jest",
+      "Vitest",
+      "Jira",
+      "Bitbucket",
+    ],
   },
   {
     role: "Freelance Web Developer",
@@ -96,34 +121,71 @@ export const experience = [
 export const clientProjects = [
   {
     name: "E-commerce webshop",
-    description: "Online store for a footwear retailer with product catalog, filtering, cart and checkout.",
+    description:
+      "Online store for a footwear retailer with product catalog, filtering, cart and checkout.",
     stack: ["Next.js", "TypeScript"],
   },
   {
     name: "Barbershop website",
-    description: "Responsive business site with services, price list and appointment booking.",
+    description:
+      "Responsive business site with services, price list and appointment booking.",
     stack: ["Next.js", "TypeScript"],
   },
   {
     name: "Pet services website",
-    description: "Responsive marketing site with service pages and a contact form, optimized for mobile.",
+    description:
+      "Responsive marketing site with service pages and a contact form, optimized for mobile.",
     stack: ["Next.js", "TypeScript"],
   },
 ];
 
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Languages", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "SQL"] },
-  { group: "Frontend", items: ["React", "Next.js", "Redux", "TanStack Query", "React Router", "REST APIs", "Responsive design"] },
-  { group: "Styling", items: ["Tailwind CSS", "Sass", "styled-components", "Material UI"] },
+  {
+    group: "Languages",
+    items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "SQL"],
+  },
+  {
+    group: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "Redux",
+      "TanStack Query",
+      "React Router",
+      "REST APIs",
+      "Responsive design",
+    ],
+  },
+  {
+    group: "Styling",
+    items: ["Tailwind CSS", "Sass", "styled-components", "Material UI"],
+  },
   { group: "Testing", items: ["Jest", "Vitest", "Playwright"] },
-  { group: "Backend & data", items: ["PostgreSQL", "MySQL", "MSSQL", "Next.js Route Handlers"] },
-  { group: "Tools", items: ["Git", "GitHub Actions", "Bitbucket", "Jira", "Vercel", "AWS CodeCommit"] },
-  { group: "Also familiar with", items: ["Angular", "PHP / Laravel", "Electron", "WordPress"] },
+  {
+    group: "Backend & data",
+    items: ["PostgreSQL", "MySQL", "MSSQL", "Next.js Route Handlers"],
+  },
+  {
+    group: "Tools",
+    items: [
+      "Git",
+      "GitHub Actions",
+      "Bitbucket",
+      "Jira",
+      "Vercel",
+      "AWS CodeCommit",
+    ],
+  },
+  {
+    group: "Also familiar with",
+    items: ["Angular", "PHP / Laravel", "Electron", "WordPress"],
+  },
 ];
 
 export const education = {
   degree: "Bachelor of Applied Studies in Computer Engineering (180 ECTS)",
   school: "Academy of Technical and Art Applied Studies Belgrade (VIŠER)",
   period: "2019 – 2022",
-  languages: "Serbian (native) · English (C1, professional working proficiency)",
+  languages:
+    "Serbian (native) · English (C1, professional working proficiency)",
 };
