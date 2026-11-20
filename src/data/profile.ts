@@ -55,8 +55,8 @@ export const featuredProject = {
     { src: "/projects/home.png", alt: "Landing page with the services list" },
   ],
   links: {
-    live: "#", // TODO: Vercel URL
-    code: "#", // TODO: GitHub repo URL
+    live: "https://fade-and-co-booking.vercel.app",
+    code: "https://github.com/ArlenStog/salon-booking",
   },
 };
 
