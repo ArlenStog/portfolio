@@ -8,6 +8,8 @@ import {
   skills,
 } from "@/data/profile";
 
+import { Analytics } from "@vercel/analytics/next";
+
 // Links still set to "#" in profile.ts are hidden instead of rendering broken buttons.
 const isSet = (href: string) => href && href !== "#";
 
@@ -335,6 +337,7 @@ export default function Home() {
         © {new Date().getFullYear()} {profile.name} · Built with Next.js &amp;
         Tailwind CSS
       </footer>
+      <Analytics />
     </>
   );
 }
